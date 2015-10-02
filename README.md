@@ -13,7 +13,7 @@ Port forward can be setup using this rhc command:
 ```rhc port-forward $appid -g $gearname```
 
 ### Keeping the port forward alive
-The problem with the above approach is that there are a variety of scenarios where the port forward can become invalid. It could be when the gear is restarted, network issues etc. In order to keep the port forward alive we need to periodically check if the port forward is valid and recrete it if needed. The ```check_and_setup_port_forward.sh``` script in the repository takes care of this by setting up the port forward and recreated the port forward if it is invalid. 
+The problem with the above approach is that there are a variety of scenarios where the port forward can become invalid. It could be when the gear is restarted, network issues etc. In order to keep the port forward alive we need to periodically check if the port forward is valid and recrete it if needed. The ```check_and_setup_port_forward.sh``` script in the repository takes care of this by setting up the port forward and recreated the port forward if it is invalid. The script can be setup as a cron job at an appropriate interval. 
 
 
 
